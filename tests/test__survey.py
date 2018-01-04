@@ -36,8 +36,8 @@ class TestSurveys(TestBase):
         result = self.api.survey.get_survey_properties(self.survey_id,
                                                        survey_settings)
         self.assertEqual(len(result), 3)
-        for property in survey_settings:
-            self.assertIn(property, result.keys())
+        for survey_setting in survey_settings:
+            self.assertIn(survey_setting, result.keys())
         self.assertIs(type(result["active"]), str)
         self.assertIs(type(result["sid"]), str)  # TODO: might be int later
 
@@ -46,4 +46,3 @@ class TestSurveys(TestBase):
         # TODO: raises 'No valid Data'
         result = self.api.survey.get_survey_properties(self.survey_id)
         self.assertGreater(len(result), 5)  # TODO: ask for exact number?
-
