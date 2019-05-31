@@ -15,7 +15,7 @@ class _Survey(object):
         method = "get_question_properties"
         params = OrderedDict([
             ("sSessionKey", self.api.session_key),
-            ("iSurveyID", question_id)
+            ("iQuestionID,", question_id)
         ])
         response = self.api.query(method=method, params=params)
         response_type = type(response)
