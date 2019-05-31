@@ -20,5 +20,5 @@ class _Question(object):
         response = self.api.query(method=method, params=params)
         response_type = type(response)
 
-        assert response_type is list
+        assert response_type is dict
         return response
