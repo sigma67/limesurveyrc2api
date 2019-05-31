@@ -1,6 +1,6 @@
 from collections import OrderedDict
 
-class _Survey(object):
+class _Question(object):
 
     def __init__(self, api):
         self.api = api
